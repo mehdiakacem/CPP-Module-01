@@ -6,7 +6,7 @@
 #    By: makacem <makacem@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/04/13 01:39:33 by makacem           #+#    #+#              #
-#    Updated: 2023/04/13 01:40:08 by makacem          ###   ########.fr        #
+#    Updated: 2023/04/13 01:54:25 by makacem          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,7 +15,6 @@ NAME = main
 CC = c++
 
 FLAGS = -Wall -Wextra -Werror -std=c++98
-HEADER = Zombie.hpp
 
 SRC = main.cpp \
 
@@ -23,10 +22,10 @@ OBJ = $(SRC:.cpp=.o)
 
 all : $(NAME)
 
-$(NAME) : $(OBJ) $(HEADER)
+$(NAME) : $(OBJ)
 	$(CC) $(FLAGS)  $(OBJ) -o $(NAME)
 
-%.o : %.cpp $(HEADER)
+%.o : %.cpp
 	$(CC) $(FLAGS) -c $< -o $@
 
 clean :
