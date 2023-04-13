@@ -1,24 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   zombieHorde.cpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: makacem <makacem@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/04/09 22:07:53 by makacem           #+#    #+#             */
-/*   Updated: 2023/04/12 20:11:42 by makacem          ###   ########.fr       */
+/*   Created: 2023/04/12 16:59:41 by makacem           #+#    #+#             */
+/*   Updated: 2023/04/13 01:31:52 by makacem          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Zombie.hpp"
 
-int main()
+Zombie* zombieHorde(int N, std::string name)
 {
-    Zombie  *Mehdi;
+    Zombie  *zombie = new Zombie[N];
 
-    Mehdi = newZombie("Mehdi");
-    Mehdi->announce();
-    randomChump("Karim");
-    delete Mehdi;
-    return(0);
+    for (int i = 0; i < N; i++)
+    {
+        zombie[i].setname(name);
+    }
+    return zombie;
 }

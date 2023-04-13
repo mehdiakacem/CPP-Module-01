@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: makacem <makacem@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/04/09 22:07:53 by makacem           #+#    #+#             */
-/*   Updated: 2023/04/12 20:11:42 by makacem          ###   ########.fr       */
+/*   Created: 2023/04/12 16:58:42 by makacem           #+#    #+#             */
+/*   Updated: 2023/04/13 01:37:13 by makacem          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,14 @@
 
 int main()
 {
-    Zombie  *Mehdi;
+    Zombie *hord;
+    
+    hord = zombieHorde(5, "Mehdi");
 
-    Mehdi = newZombie("Mehdi");
-    Mehdi->announce();
-    randomChump("Karim");
-    delete Mehdi;
-    return(0);
+    for (int i = 0; i < 5; i++)
+    {
+        hord[i].announce();
+    }
+    delete [] hord;
+    return (0);
 }

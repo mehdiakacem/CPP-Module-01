@@ -1,24 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Zombie.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: makacem <makacem@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/04/09 22:07:53 by makacem           #+#    #+#             */
-/*   Updated: 2023/04/12 20:11:42 by makacem          ###   ########.fr       */
+/*   Created: 2023/04/12 16:58:56 by makacem           #+#    #+#             */
+/*   Updated: 2023/04/13 01:32:18 by makacem          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Zombie.hpp"
 
-int main()
+Zombie::Zombie()
 {
-    Zombie  *Mehdi;
+    std::cout<< name << "Default constructor called." << std::endl;
+}
 
-    Mehdi = newZombie("Mehdi");
-    Mehdi->announce();
-    randomChump("Karim");
-    delete Mehdi;
-    return(0);
+Zombie::~Zombie()
+{
+    std::cout<< name << " has been destroyed." << std::endl;
+}
+
+void    Zombie::announce(void)
+{
+    std::cout << name << ": BraiiiiiiinnnzzzZ..." << std::endl;
+}
+
+void    Zombie::setname(std::string name)
+{
+    this->name = name;
 }

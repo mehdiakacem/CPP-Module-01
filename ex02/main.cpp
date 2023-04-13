@@ -5,20 +5,16 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: makacem <makacem@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/04/09 22:07:53 by makacem           #+#    #+#             */
-/*   Updated: 2023/04/12 20:11:42 by makacem          ###   ########.fr       */
+/*   Created: 2023/04/13 01:39:41 by makacem           #+#    #+#             */
+/*   Updated: 2023/04/13 01:41:43 by makacem          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombie.hpp"
+#include <iostream>
 
 int main()
 {
-    Zombie  *Mehdi;
+    std::string str = "HI THIS IS BRAIN";
 
-    Mehdi = newZombie("Mehdi");
-    Mehdi->announce();
-    randomChump("Karim");
-    delete Mehdi;
-    return(0);
+    
 }
