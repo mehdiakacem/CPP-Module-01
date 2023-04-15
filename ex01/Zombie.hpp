@@ -6,7 +6,7 @@
 /*   By: makacem <makacem@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/12 16:59:12 by makacem           #+#    #+#             */
-/*   Updated: 2023/04/13 01:28:18 by makacem          ###   ########.fr       */
+/*   Updated: 2023/04/13 02:03:29 by makacem          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ class Zombie
     public:
         Zombie();
         ~Zombie();
-        void    setname(std::string name);
+        void    setName(std::string name);
         void    announce(void);
 };
 
