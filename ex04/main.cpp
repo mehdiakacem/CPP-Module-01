@@ -6,7 +6,7 @@
 /*   By: makacem <makacem@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/15 08:48:27 by makacem           #+#    #+#             */
-/*   Updated: 2023/04/15 11:33:18 by makacem          ###   ########.fr       */
+/*   Updated: 2023/04/16 21:09:11 by makacem          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,10 @@ int main(int argc, char **argv)
     }
     std::string filename = argv[1];
     std::string s1 = argv[2];
+    if (s1.length() == 0)
+        return 0;
     std::string s2 = argv[3];
+    
     
     std::ifstream   iFile;
     std::ofstream   oFile;
@@ -40,7 +43,11 @@ int main(int argc, char **argv)
         return 0;
     }
     std::string line;
-    
+    int i;
+    if (s2.find(s1) != std::string::npos)
+        i = s1.length();
+    else
+        i = 1;
     while (getline(iFile, line))
     {
         std::size_t found = line.find(s1);
@@ -51,7 +58,7 @@ int main(int argc, char **argv)
         }
         while (found != std::string::npos)
         {
-            found = line.find(s1, found+1);
+            found = line.find(s1, found + i);
             if (found != std::string::npos)
             {
                 line.erase(found, s1.length());
